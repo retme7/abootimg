@@ -38,12 +38,13 @@ never touched/modified.
 * Building abootimg
 -------------------
 
-On a linux system, it's simply as:
+On a *nix system, it's simply as:
 
 	$ make
 
-blkid library is needed to perform some sanity checks when writing boot image
-directly on a block device (to avoid writing a valid existing filesystem).
+TODO:
+  Use blkid library to perform some sanity checks when writing boot image
+  directly on a block device (to avoid writing a valid existing filesystem).
 
 
 
