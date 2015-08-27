@@ -2,3 +2,7 @@ abootimg
 version.h
 *.o
 *.swp
+*.img
+*.cfg
+zImage
+/ramdisk/
