@@ -16,6 +16,7 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
+#define VERSION_STR "0.1"
 
 #include <stdlib.h>
 #include <stdio.h>
@@ -46,8 +47,6 @@
 # include <sys/disk.h> /* DKIOCGETBLOCKCOUNT */
 #endif
 
-
-#include "version.h"
 #include "bootimg.h"
 #include "fmemopen.h"
 
