@@ -1,9 +1,9 @@
 CC=gcc
 CFLAGS=-O3 -Wall -I.
-DEPS = bootimg.h fmemopen.h
-OBJ = fmemopen.o abootimg.o
+DEPS = src/bootimg.h scr/fmemopen.h
+OBJ = src/fmemopen.o src/abootimg.o
 
-all: abootimg
+all: cpi
 
 %.o: %.c $(DEPS)
 	$(CC) -c -o $@ $< $(CFLAGS)
@@ -11,7 +11,10 @@ all: abootimg
 abootimg: $(OBJ)
 	$(CC) -o $@ $^ $(CFLAGS)
 
+cpi: abootimg
+	mv abootimg bin/abootimg
+
 clean:
-	rm -f abootimg *.o
+	rm -f bin/abootimg src/*.o
 
 .PHONY:	clean all
