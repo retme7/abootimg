@@ -16,5 +16,4 @@ fi
 
 mkdir -p $ramdisk
 
-zcat $initrd | ( cd $ramdisk; cpio -i )
-
+gunzip -c $initrd | ( cd $ramdisk; cpio -i )
