@@ -17,12 +17,6 @@ Boot images mainly convey:
 - optionaly, a 2nd stage bootloader
 - the cmdline passed to the kernel when booting.
 
-The official tool used to create boot images is part of the Android Project,
-available here:
-
-	http://android.git.kernel.org/?p=platform/system/core.git;a=tree;f=mkbootimg
-
-
 abootimg can work directly on block devices, or, the safest way,  on a file image.
 File images can be read/written with dd:
 
