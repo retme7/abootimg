@@ -9,7 +9,7 @@ all: cpi
 	$(CC) -c -o $@ $< $(CFLAGS)
 
 abootimg: $(OBJ)
-	$(CC) -o $@ $^ $(CFLAGS)
+	$(CC) -o $@ $^ $(CFLAGS) -lbsd
 
 cpi: abootimg
 	mv abootimg bin/abootimg

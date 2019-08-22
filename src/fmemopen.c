@@ -53,7 +53,7 @@ static int writefn(void *handler, const char *buf, int size) {
   return size;
 }
 
-static fpos_t seekfn(void *handler, fpos_t offset, int whence) {
+static size_t seekfn(void *handler, size_t offset, int whence) {
   size_t pos;
   fmem_t *mem = handler;
 
@@ -83,7 +83,7 @@ static fpos_t seekfn(void *handler, fpos_t offset, int whence) {
   }
 
   mem->pos = pos;
-  return (fpos_t)pos;
+  return (size_t)pos;
 }
 
 static int closefn(void *handler) {
